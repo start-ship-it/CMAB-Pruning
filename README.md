@@ -10,5 +10,5 @@ LLaVA: Large Language and Vision Assistant [LLaVA](https://github.com/haotian-li
 Qwen [Qwen](https://github.com/QwenLM/Qwen)   
 dataset:  
 seed={42, 2026, 3407, 0, 1024}  
-Image and Text Dataset [ChartQA](https://github.com/vis-nlp/ChartQA) [DocVQA](https://github.com/anisha2102/docvqa) [LLaVA_coco](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) [ScienceQA](https://scienceqa.github.io/) [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)
-
+Image and Text Dataset [ChartQA](https://github.com/vis-nlp/ChartQA) [DocVQA](https://github.com/anisha2102/docvqa) [LLaVA_coco](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) [ScienceQA](https://scienceqa.github.io/) [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)   
+Text-only Dataset [sharegpt_clean](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) [alpaca_calib](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) [wikitext-2](https://huggingface.co/datasets/mindchain/wikitext2)
