@@ -20,6 +20,4 @@ CMAB: A Cross-Modal Activation Balance-Aware Pruning Method for Multimodal Large
 │   │   ├── text_merge.py              
 │   │   ├── text_256_3.jsonl       
 │   ├── c4_local_data 
-│   │   ├── en
-│   │   │   ├── c4-validation.00000-of-00008.json.gz
 │   ├── wikitext     
