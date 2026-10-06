@@ -1,6 +1,8 @@
 CMAB: A Cross-Modal Activation Balance-Aware Pruning Method for Multimodal Large Language Models
+<img width="13027" height="3248" alt="Figure2_01" src="https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199" />
 
 After the paper is published, we will open source all the code.
+
 
 Pruning:   
 cmab_llava_v1.6_mistral_7B_Ada.py [Model Pruning Code]    
