@@ -2,7 +2,8 @@ CMAB: A Cross-Modal Activation Balance-Aware Pruning Method for Multimodal Large
 
 After the paper is published, we will open source all the code.
 
-Pruning: cmab_llava_v1.6_mistral_7B_Ada.py [Model Pruning Code]  
+Pruning:   
+cmab_llava_v1.6_mistral_7B_Ada.py [Model Pruning Code]    
 Eval:  
 Qwen model assessment Tools [VLMEvalKit](https://github.com/open-compass/VLMEvalKit)  
 LLaVA model assessment Tools [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)  
