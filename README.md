@@ -70,16 +70,26 @@ pip install flash-attn==2.5.8 --no-build-isolation
 # Install remaining dependencies
 pip install -e .
 
-'''
+### 2. Prepare Calibration Data
 
-### 2. Calibration Dataset
-seed={42, 2026, 3407, 0, 1024}  
-Image and Text Dataset [ChartQA](https://github.com/vis-nlp/ChartQA) [DocVQA](https://github.com/anisha2102/docvqa) [LLaVA_coco](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) [ScienceQA](https://scienceqa.github.io/) [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)   
-Text-only Dataset [sharegpt_clean](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) [alpaca_calib](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) [wikitext-2](https://huggingface.co/datasets/mindchain/wikitext2)
+CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds (`42`, `2026`, `3407`, `0`, `1024`).
 
-### 3. Pruning
-cmab_llava_v1.6_mistral_7B_Ada.py [Model Pruning Code]
+**Vision-Language Datasets:**
+- [ChartQA](https://github.com/vis-nlp/ChartQA) | [DocVQA](https://github.com/anisha2102/docvqa) | [LLaVA-COCO](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) | [ScienceQA](https://scienceqa.github.io/) | [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) | [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)
 
-### 4. Eval
-Qwen model assessment Tools [VLMEvalKit](https://github.com/open-compass/VLMEvalKit)  
-LLaVA model assessment Tools [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) 
+**Text-Only Datasets:**
+- [ShareGPT (Clean)](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) | [Alpaca](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) | [WikiText-2](https://huggingface.co/datasets/mindchain/wikitext2)
+
+*Note: Data extraction and merging scripts are provided in the `scripts/` directory to streamline this process.*
+
+### 3. Run CMAB Pruning
+
+Execute the corresponding Python script for your target architecture. For example, to prune the `LLaVA-v1.6-Mistral-7B` model, run the following command:
+
+```bash
+python cmab_llava_v1.6_mistral_7B_Ada.py \
+    --model_path /path/to/llava-v1.6-mistral-7b \
+    --calibration_data /path/to/calibration.jsonl \
+    --sparsity_ratio 0.5 \
+    --seed 42 \
+    --save_dir ./checkpoints/cmab_llava_v1.6_50
