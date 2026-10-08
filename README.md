@@ -72,7 +72,7 @@ pip install -e .
 ```
 ### 2. Prepare Calibration Data
 
-CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds (`42`, `2026`, `3407`, `0`, `1024`).
+CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds(`42`, `2026`, `3407`, `0`, `1024`).
 
 **Vision-Language Datasets:**
 - [ChartQA](https://github.com/vis-nlp/ChartQA) | [DocVQA](https://github.com/anisha2102/docvqa) | [LLaVA-COCO](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) | [ScienceQA](https://scienceqa.github.io/) | [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) | [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)
@@ -89,3 +89,11 @@ Execute the corresponding Python script for your target architecture. For exampl
 ```bash
 python cmab_llava_v1.6_mistral_7B_Ada.py 
 ```
+
+### 4. Evaluation
+
+We rely on standardized, open-source evaluation frameworks to ensure rigorous and reproducible zero-shot benchmarking across all tasks.
+
+For Qwen Architectures: We utilize [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for specialized assessmentsmodel.
+
+For LLaVA Architectures: We utilize [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for comprehensive evaluation on multimodal benchmarks.
