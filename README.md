@@ -80,7 +80,7 @@ CMAB requires a hybrid calibration dataset comprising both text-only and vision-
 **Text-Only Datasets:**
 - [ShareGPT (Clean)](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) | [Alpaca](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) | [WikiText-2](https://huggingface.co/datasets/mindchain/wikitext2)
 
-*Note: Data extraction and merging scripts are provided in the `scripts/` directory to streamline this process.*
+*Note: Data extraction and merging scripts are provided in the `dataset/` directory to streamline this process.*
 
 ### 3. Run CMAB Pruning
 
