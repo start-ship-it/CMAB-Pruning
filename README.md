@@ -69,7 +69,7 @@ pip install flash-attn==2.5.8 --no-build-isolation
 
 # Install remaining dependencies
 pip install -e .
-
+```
 2. Prepare Calibration Data
 
 CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds (`42`, `2026`, `3407`, `0`, `1024`).
