@@ -74,24 +74,20 @@ pip install -e .
 ### 2. Prepare Calibration Data
 
 CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds(`42`, `2026`, `3407`, `0`, `1024`).
-
 **Vision-Language Datasets:**
 - [ChartQA](https://github.com/vis-nlp/ChartQA) | [DocVQA](https://github.com/anisha2102/docvqa) | [LLaVA-COCO](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) | [ScienceQA](https://scienceqa.github.io/) | [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) | [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)
-
 **Text-Only Datasets:**
 - [ShareGPT (Clean)](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) | [Alpaca](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) | [WikiText-2](https://huggingface.co/datasets/mindchain/wikitext2)
-
 *Note: Data extraction and merging scripts are provided in the `dataset/` directory to streamline this process.*
 
 ### 3. Run CMAB Pruning
-
 Execute the corresponding Python script for your target architecture. For example, to prune the `LLaVA-v1.6-Mistral-7B` model, run the following command:
-
 ```bash
 python cmab_llava_v1.6_mistral_7B_Ada.py 
 ```
+
 ### 4. Fine-tuning(Lora/Full)
-[ms-swift](https://github.com/modelscope/ms-swift)
+[ms-swift](https://github.com/modelscope/ms-swift)  
 [LLaMA Factory](https://github.com/hiyouga/LLaMAFactory)
 
 ### 5. 2:4 Sparse 
@@ -99,9 +95,6 @@ python cmab_llava_v1.6_mistral_7B_Ada.py
 python cmab_llava_v1.6_mistral_7B_2:4.py 
 ```
 ### 6. Evaluation
-
 We rely on standardized, open-source evaluation frameworks to ensure rigorous and reproducible zero-shot benchmarking across all tasks.
-
 - For **Qwen** Architectures: We utilize [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for specialized assessmentsmodel.
-
 - For **LLaVA** Architectures: We utilize [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for comprehensive evaluation on multimodal benchmarks.
