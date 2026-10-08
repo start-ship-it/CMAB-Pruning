@@ -306,13 +306,14 @@ class LlavaCmaPruner:
         print("🎉 The model and adaptive statistics have been successfully saved!")
 
 if __name__ == "__main__":
+    SEED = 1024
     CONFIG = {
-        "model": "/root/autodl-tmp/llava-hf/llava-v1.6-mistral-7b-hf", 
-        "txt_data": "/root/autodl-tmp/CMA-Pruning/data/text_only/text_256_3.jsonl",
-        "vis_json": "/root/autodl-tmp/CMA-Pruning/data/image_text/merged_vision_32_6.json",
-        "vis_imgs": "/root/autodl-tmp/CMA-Pruning/data/image_text",
-        "save_to": "./llava-v1.6-mistral-7b-cma-50",
-        "stats_cache": "./cma_Log1p_LLaVA_v1.6_mistral_stats_7b.pt" 
+        "model": "/llava-hf/llava-v1.6-mistral-7b-hf", 
+        "txt_data": f"/dataset/mixed_text_seed{SEED}_768.jsonl",
+        "vis_json": f"/dataset/mixed_calibration_seed{SEED}_192.json",
+        "vis_imgs": "/dataset",
+        "save_to": f"./llava-v1.6-mistral-7b-cma-50-seed{SEED}",
+        "stats_cache": f"./cma_Log1p_LLaVA_v1.6_mistral_stats_7b_seed{SEED}.pt" 
     }
 
     total_start = time.time()
@@ -322,7 +323,7 @@ if __name__ == "__main__":
         sparsity=0.50, 
         omega=1.0, 
         tau_0=1.0, 
-        gamma=1
+        gamma=1.0
     )
     pruner.load_model()
     
