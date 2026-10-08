@@ -94,6 +94,6 @@ python cmab_llava_v1.6_mistral_7B_Ada.py
 
 We rely on standardized, open-source evaluation frameworks to ensure rigorous and reproducible zero-shot benchmarking across all tasks.
 
-For Qwen Architectures: We utilize [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for specialized assessmentsmodel.
+- For **Qwen** Architectures: We utilize [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for specialized assessmentsmodel.
 
-For LLaVA Architectures: We utilize [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for comprehensive evaluation on multimodal benchmarks.
+- For **LLaVA** Architectures: We utilize [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for comprehensive evaluation on multimodal benchmarks.
