@@ -127,7 +127,7 @@ class CMAProfiler:
         kl_v = torch.sum(p_v * torch.log((p_v + eps) / (M + eps)))
         kl_t = torch.sum(p_t * torch.log((p_t + eps) / (M + eps)))
         js_div = 0.5 * kl_v + 0.5 * kl_t
-        G_l = E_l + omega * delta_sigma_l * js_div
+        #G_l = E_l + omega * delta_sigma_l * js_div
         tau = tau_0 * ((1.0 - sparsity) ** gamma)
         tau = max(tau, 1e-4) 
         lambda_l = 1.0 / (1.0 + torch.exp(-G_l / tau))
