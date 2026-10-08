@@ -26,8 +26,7 @@
 
 ## 📊 Main Results
 
-CMAB demonstrates highly competitive parameter compression across multiple MLLM architectures on both multimodal cognitive reasoning and text-only language modeling tasks.
-LLaVA[LLaVA](https://github.com/haotian-liu/LLaVA)  Qwen [Qwen](https://github.com/QwenLM/Qwen) 
+CMAB demonstrates highly competitive parameter compression across multiple MLLM architectures([LLaVA](https://github.com/haotian-liu/LLaVA),[Qwen](https://github.com/QwenLM/Qwen) ) on both multimodal cognitive reasoning and text-only language modeling tasks.
 
 **Zero-shot performance of LLaVA-v1.6-Mistral-7B at 50% sparsity:**
 
