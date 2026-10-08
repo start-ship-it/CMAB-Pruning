@@ -7,11 +7,18 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)]()
 
-<img width="13027" height="3248" alt="Figure2_01" src="https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199" />
+**[Qi Wu]**, **[Rui Pan]**, **[Jiaqi Zhao]**, **[Zecheng Liu]**, **[Wenhui Liu]**, **[Xiaoyan Chen]**
+
+*College of Electronic Information and Automation, Tianjin University of Science and Technology*
+
 </div>
 
 <br/>
+
+> **TL;DR:** CMAB is an efficient, training-free, unstructured pruning framework tailored for Multimodal Large Language Models (MLLMs). It corrects cross-modal magnitude biases and achieves **1.58x - 1.65x end-to-end inference speedup** under 2:4 structured sparsity without degrading vision-language reasoning capabilities.
+
 ---
+
 ## 🌟 Highlights
 
 - **Theoretical Foundation**: We reveal that the fundamental cause of weight evaluation distortion in MLLM pruning is the heterogeneous distribution between visual and textual features under the OBD framework.
@@ -67,7 +74,6 @@ conda activate cmab
 
 # Install pure dependencies via setup.py
 pip install -e .
-
 
 
 
