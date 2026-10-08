@@ -18,7 +18,7 @@
 - **Training-Free & Fast**: Achieves performance comparable to computationally expensive second-order methods (like SparseGPT) using only first-order computational cost.
 
 <div align="center">
-    <img width="13027" height="3248" alt="Figure2_01" src="https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199" /> alt="CMAB Framework" width="100%">
+    <img width="13027" height="3248" alt="Figure2_01" src="https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199" /> 
     <p><em>Figure 1: The overall architecture of the Cross-Modal Activation Balance-Aware (CMAB) Pruning Method.</em></p>
 </div>
 
@@ -30,22 +30,12 @@ CMAB demonstrates highly competitive parameter compression across multiple MLLM 
 
 **Zero-shot performance of LLaVA-v1.6-Mistral-7B at 50% sparsity:**
 
-| Method | TextVQA | ChartQA | MME | POPE | MMBench | Rel_ACC (%) | WikiText |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Dense | 65.60 | 53.08 | 37.69/75.30 | 88.17 | 78.21 | 100.00 | 6.82 |
-| Wanda | 63.63 | 44.32 | 38.21/67.84 | 88.33 | 76.59 | 95.00 | 8.24 |
-| SparseGPT | 61.59 | 46.76 | 37.46/70.24 | 86.83 | 76.77 | 95.20 | 8.50 |
-| **CMAB (Ours)** | **63.40** | **46.72** | **40.45/69.25** | **88.50** | **77.92** | **97.32** | **8.15** |
-
-<details>
-<summary>👉 Click to expand more results across varying sparsity ratios (40% to 70%)</summary>
-
-<div align="center">
-    <img src="assets/results_curves.png" alt="Performance Curves" width="80%">
-    <p><em>CMAB exhibits a highly stable and resilient degradation trajectory, maintaining significant advantages at extreme sparsities (e.g., 70%).</em></p>
-</div>
-
-</details>
+| Method | TextVQA | ChartQA | MME | POPE | MMBench | Rel_ACC (%) | WikiText | C4 | Rel_PPL
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Dense | 65.60 | 53.08 | 37.69/75.30 | 88.17 | 78.21 | 100.00 | 6.82 | 10.07 | 100 |
+| Wanda | 63.63 | 44.32 | 38.21/67.84 | 88.33 | 76.59 | 95.00 | 8.24 | 12.10 | 83.00 |
+| SparseGPT | 61.59 | 46.76 | 37.46/70.24 | 86.83 | 76.77 | 95.20 | 8.50 | 8.24 | 8.24 |
+| **CMAB (Ours)** | **63.40** | **46.72** | **40.45/69.25** | **88.50** | **77.92** | **97.32** | **8.15** | **11.97** | **83.90** |
 
 ---
 
