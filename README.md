@@ -74,6 +74,7 @@ pip install -e .
 ### 2. Prepare Calibration Data
 
 CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds(`42`, `2026`, `3407`, `0`, `1024`).
+
 **Vision-Language Datasets:**
 - [ChartQA](https://github.com/vis-nlp/ChartQA) | [DocVQA](https://github.com/anisha2102/docvqa) | [LLaVA-COCO](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) | [ScienceQA](https://scienceqa.github.io/) | [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) | [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)
   
