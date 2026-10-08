@@ -70,7 +70,7 @@ pip install flash-attn==2.5.8 --no-build-isolation
 # Install remaining dependencies
 pip install -e .
 ```
-2. Prepare Calibration Data
+### 2. Prepare Calibration Data
 
 CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds (`42`, `2026`, `3407`, `0`, `1024`).
 
@@ -81,3 +81,11 @@ CMAB requires a hybrid calibration dataset comprising both text-only and vision-
 - [ShareGPT (Clean)](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) | [Alpaca](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) | [WikiText-2](https://huggingface.co/datasets/mindchain/wikitext2)
 
 *Note: Data extraction and merging scripts are provided in the `scripts/` directory to streamline this process.*
+
+### 3. Run CMAB Pruning
+
+Execute the corresponding Python script for your target architecture. For example, to prune the `LLaVA-v1.6-Mistral-7B` model, run the following command:
+
+```bash
+python cmab_llava_v1.6_mistral_7B_Ada.py 
+```
