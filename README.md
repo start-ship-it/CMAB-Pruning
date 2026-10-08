@@ -8,7 +8,10 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)]()
 
 <img width="13027" height="3248" alt="Figure2_01" src="https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199" />
+</div>
 
+<br/>
+---
 ## 🌟 Highlights
 
 - **Theoretical Foundation**: We reveal that the fundamental cause of weight evaluation distortion in MLLM pruning is the heterogeneous distribution between visual and textual features under the OBD framework.
