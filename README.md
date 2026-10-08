@@ -70,6 +70,8 @@ pip install flash-attn==2.5.8 --no-build-isolation
 # Install remaining dependencies
 pip install -e .
 
+'''
+
 ### 2. Calibration Dataset
 seed={42, 2026, 3407, 0, 1024}  
 Image and Text Dataset [ChartQA](https://github.com/vis-nlp/ChartQA) [DocVQA](https://github.com/anisha2102/docvqa) [LLaVA_coco](https://huggingface.co/datasets/lmms-lab-encoder/llava-bench-coco) [ScienceQA](https://scienceqa.github.io/) [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V) [TextCaps](https://huggingface.co/datasets/lmms-lab-encoder/TextCaps)   
