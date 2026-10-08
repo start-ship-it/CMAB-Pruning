@@ -92,6 +92,7 @@ python cmab_llava_v1.6_mistral_7B_Ada.py
 ```
 ### 4. Fine-tuning(Lora/Full)
 [ms-swift](https://github.com/modelscope/ms-swift)
+[LLaMA Factory](https://github.com/hiyouga/LLaMAFactory)
 
 ### 5. 2:4 Sparse 
 ```bash
