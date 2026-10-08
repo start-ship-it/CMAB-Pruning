@@ -1,12 +1,11 @@
-# sample_scienceqa.py
+# ScienceQA.py
 import json
 import os
 from datasets import load_dataset
 
 def stream_scienceqa(seed=42, num_samples=256, output_dir="./scienceqa_sampled"):
-    # ⚠️ 修正了正确的 Hugging Face 官方仓库名
     dataset_name = "derek-thomas/ScienceQA" 
-    print(f"🚀 [ScienceQA] 开启流式采样 (Seed={seed})...")
+    print(f"🚀 [ScienceQA] Starting streaming sampling (Seed={seed})...")
     
     dataset = load_dataset(dataset_name, split="validation", streaming=True)
     shuffled_dataset = dataset.shuffle(seed=seed, buffer_size=10000)
@@ -19,7 +18,7 @@ def stream_scienceqa(seed=42, num_samples=256, output_dir="./scienceqa_sampled")
     extracted_count = 0
     with open(jsonl_path, 'w', encoding='utf-8') as f:
         for item in shuffled_dataset:
-            # 1. 过滤纯文本数据 (没有图片的题丢弃)
+            # 1. Filter pure text data (discard questions without images)
             if 'image' not in item or item['image'] is None:
                 continue
                 
@@ -28,20 +27,20 @@ def stream_scienceqa(seed=42, num_samples=256, output_dir="./scienceqa_sampled")
             except:
                 continue
                 
-            # 2. 构造选择题 Prompt
+            # 2. Construct multiple-choice Prompt
             question = item.get('question', '')
             choices = item.get('choices', [])
             if choices:
                 question += " \nChoices: " + ", ".join([str(c) for c in choices])
             
-            # 3. 解析真实答案
+            # 3. Parse the ground-truth answer
             ans_idx = item.get('answer', 0)
             if isinstance(choices, list) and len(choices) > int(ans_idx):
                 label = str(choices[int(ans_idx)])
             else:
                 label = str(ans_idx)
                 
-            # 4. 保存
+            # 4. Save to disk
             img_filename = f"scienceqa_{extracted_count}.png"
             image.save(os.path.join(img_dir, img_filename))
             
@@ -57,8 +56,7 @@ def stream_scienceqa(seed=42, num_samples=256, output_dir="./scienceqa_sampled")
             if extracted_count >= num_samples:
                 break
                 
-    print(f"🎉 [ScienceQA] 抽取完成！数据已保存至: {save_dir}")
+    print(f"🎉 [ScienceQA] Extraction complete! Data saved to: {save_dir}")
 
 if __name__ == "__main__":
-    # 您当前使用的终端已经有了网络加速环境，直接运行即可
     stream_scienceqa(seed=1024, num_samples=256)
