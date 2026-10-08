@@ -11,7 +11,7 @@
 
 <br/>
 
-> **TL;DR:** CMAB is MLLMs Pruning Method.
+> **CMAB:** MLLMs Pruning Method.
 ---
 
 ## 🌟 Highlights
