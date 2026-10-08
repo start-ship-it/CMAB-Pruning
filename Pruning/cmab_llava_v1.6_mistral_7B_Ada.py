@@ -108,52 +108,30 @@ class CMAProfiler:
 
         s = self.act_stats[name]
         eps = 1e-8
-        
         a_t = torch.sqrt(s['t_sq'] / s['t_cnt']) if s['t_cnt'] > 0 else torch.zeros_like(s['t_sq'])
         a_v = torch.sqrt(s['v_sq'] / s['v_cnt']) if s['v_cnt'] > 0 else torch.zeros_like(s['v_sq'])
         a_t, a_v = a_t.float(), a_v.float()
-        
-
         log_t = torch.log1p(a_t)
         log_v = torch.log1p(a_v)
-        
-
         norm_t = log_t / (torch.max(log_t) + eps)
         norm_v = log_v / (torch.max(log_v) + eps)
-
-
         p_t = norm_t / (torch.sum(norm_t) + eps)
         p_v = norm_v / (torch.sum(norm_v) + eps)
-        
-
         energy_t = torch.sum(norm_t.pow(2))
         energy_v = torch.sum(norm_v.pow(2))
         E_l = torch.log((energy_v + eps) / (energy_t + eps))
-        
-
         var_t = torch.var(norm_t)
         var_v = torch.var(norm_v)
         delta_sigma_l = (var_v - var_t) / (var_v + var_t + eps)
-        
-
         M = 0.5 * (p_v + p_t)
         kl_v = torch.sum(p_v * torch.log((p_v + eps) / (M + eps)))
         kl_t = torch.sum(p_t * torch.log((p_t + eps) / (M + eps)))
         js_div = 0.5 * kl_v + 0.5 * kl_t
-        
-
         G_l = E_l + omega * delta_sigma_l * js_div
-        
-
         tau = tau_0 * ((1.0 - sparsity) ** gamma)
         tau = max(tau, 1e-4) 
-        
-
         lambda_l = 1.0 / (1.0 + torch.exp(-G_l / tau))
-
-
         act_total = lambda_l * norm_v + (1.0 - lambda_l) * norm_t
-        
         return act_total, lambda_l.item()
 
 class LlavaCmaPruner:
