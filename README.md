@@ -53,7 +53,7 @@ We recommend using Conda to manage the environment. The codebase has been strict
 Clone this repository and set up the environment:
 
 ```bash
-git clone [https://github.com/start-ship-it/CMAB-Pruning.git](https://github.com/start-ship-it/CMAB-Pruning.git)
+git clone https://github.com/start-ship-it/CMAB-Pruning.git
 cd CMAB-Pruning
 
 # Create and activate a conda environment
@@ -61,16 +61,16 @@ conda create -n cmab python=3.10 -y
 conda activate cmab
 
 # Install PyTorch (CUDA 12.1)
-pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
 
 # Install exact versions of core dependencies to ensure reproducibility
 pip install transformers==4.44.2
 pip install flash-attn==2.5.8 --no-build-isolation
 
 # Install remaining dependencies
-pip install -e . '''
+pip install -e .
 
-### 2. Prepare Calibration Data
+2. Prepare Calibration Data
 
 CMAB requires a hybrid calibration dataset comprising both text-only and vision-language samples to accurately balance cross-modal activations. To ensure statistical robustness, evaluations are conducted across five distinct random seeds (`42`, `2026`, `3407`, `0`, `1024`).
 
@@ -81,15 +81,3 @@ CMAB requires a hybrid calibration dataset comprising both text-only and vision-
 - [ShareGPT (Clean)](https://huggingface.co/datasets/philschmid/sharegpt-raw/tree/main) | [Alpaca](https://huggingface.co/datasets/shibing624/alpaca-zh/tree/main) | [WikiText-2](https://huggingface.co/datasets/mindchain/wikitext2)
 
 *Note: Data extraction and merging scripts are provided in the `scripts/` directory to streamline this process.*
-
-### 3. Run CMAB Pruning
-
-Execute the corresponding Python script for your target architecture. For example, to prune the `LLaVA-v1.6-Mistral-7B` model, run the following command:
-
-```bash
-python cmab_llava_v1.6_mistral_7B_Ada.py \
-    --model_path /path/to/llava-v1.6-mistral-7b \
-    --calibration_data /path/to/calibration.jsonl \
-    --sparsity_ratio 0.5 \
-    --seed 42 \
-    --save_dir ./checkpoints/cmab_llava_v1.6_50
