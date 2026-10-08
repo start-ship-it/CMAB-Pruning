@@ -3,7 +3,8 @@
 # CMAB: A Cross-Modal Activation Balance-Aware Pruning Method for MLLMs
 
 [![Paper](https://img.shields.io/badge/Paper-ESWA%20Under%20Review-blue)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Models-orange.svg)]()
+[![ModelScope](https://img.shields.io/badge/🤖%20ModelScope-Models-purple.svg)]()
 [![Python](https://img.shields.io/badge/Python-3.10+-green.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1+-orange.svg)]()
 </div>
