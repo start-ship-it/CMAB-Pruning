@@ -7,8 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)]()
 
-</div>
-<br/>
+
 ## 🌟 Highlights
 
 - **Theoretical Foundation**: We reveal that the fundamental cause of weight evaluation distortion in MLLM pruning is the heterogeneous distribution between visual and textual features under the OBD framework.
