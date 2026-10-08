@@ -8,7 +8,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)]()
 
 
-## 🌟 Highlights
+# 🌟 Highlights
 
 - **Theoretical Foundation**: We reveal that the fundamental cause of weight evaluation distortion in MLLM pruning is the heterogeneous distribution between visual and textual features under the OBD framework.
 - **Cross-Modal Feature Decoupling (CFD)**: Eliminates inter-modality magnitude biases and constructs a fair relative metric space for activations.
