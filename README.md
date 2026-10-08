@@ -68,7 +68,7 @@ pip install transformers==4.44.2
 pip install flash-attn==2.5.8 --no-build-isolation
 
 # Install remaining dependencies
-pip install -e .
+pip install -e . '''
 
 ### 2. Prepare Calibration Data
 
