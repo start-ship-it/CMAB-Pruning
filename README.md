@@ -91,9 +91,12 @@ Execute the corresponding Python script for your target architecture. For exampl
 python cmab_llava_v1.6_mistral_7B_Ada.py 
 ```
 ### 4. Fine-tuning(Lora/Full)
+[ms-swift](https://github.com/modelscope/ms-swift)
 
 ### 5. 2:4 Sparse 
-
+```bash
+python cmab_llava_v1.6_mistral_7B_2:4.py 
+```
 ### 6. Evaluation
 
 We rely on standardized, open-source evaluation frameworks to ensure rigorous and reproducible zero-shot benchmarking across all tasks.
