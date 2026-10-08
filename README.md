@@ -32,7 +32,7 @@ CMAB demonstrates highly competitive parameter compression across multiple MLLM 
 
 **Zero-shot performance of LLaVA-v1.6-Mistral-7B at 50% sparsity:**
 
-| Method | TextVQA ↑ | ChartQA ↑ | MME ↑ | POPE ↑ | MMBench ↑ | Rel_ACC (%) ↑ | WikiText ↓ | C4 ↓ | Rel_PPL (%) ↑
+| Method | TextVQA↑ | ChartQA↑ | MME↑ | POPE↑ | MMBench↑ | Rel_ACC (%)↑ | WikiText↓ | C4↓ | Rel_PPL (%)↑
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Dense | 65.60 | 53.08 | 37.69/75.30 | 88.17 | 78.21 | 100.00 | 6.82 | 10.07 | 100 |
 | Wanda | 63.63 | 44.32 | 38.21/67.84 | 88.33 | 76.59 | 95.00 | 8.24 | 12.10 | 83.00 |
