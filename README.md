@@ -7,8 +7,13 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)]()
 
+</div>
 
-# 🌟 Highlights
+<br/>
+
+---
+
+## 🌟 Highlights
 
 - **Theoretical Foundation**: We reveal that the fundamental cause of weight evaluation distortion in MLLM pruning is the heterogeneous distribution between visual and textual features under the OBD framework.
 - **Cross-Modal Feature Decoupling (CFD)**: Eliminates inter-modality magnitude biases and constructs a fair relative metric space for activations.
@@ -63,16 +68,6 @@ conda activate cmab
 
 # Install pure dependencies via setup.py
 pip install -e .
-
-
-
-
-
-
-
-
-
-
 
 
 
