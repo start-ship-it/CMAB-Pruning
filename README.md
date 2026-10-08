@@ -90,8 +90,11 @@ Execute the corresponding Python script for your target architecture. For exampl
 ```bash
 python cmab_llava_v1.6_mistral_7B_Ada.py 
 ```
+### 4. Fine-tuning(Lora/Full)
 
-### 4. Evaluation
+### 5. 2:4 Sparse 
+
+### 6. Evaluation
 
 We rely on standardized, open-source evaluation frameworks to ensure rigorous and reproducible zero-shot benchmarking across all tasks.
 
