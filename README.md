@@ -18,7 +18,7 @@
 - **Training-Free & Fast**: Achieves performance comparable to computationally expensive second-order methods (like SparseGPT) using only first-order computational cost.
 
 <div align="center">
-    <img src="<"https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199" />" alt="CMAB Framework" width="100%">
+    <img src="<"[https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199](https://github.com/user-attachments/assets/850ff315-cb35-4810-872b-099232105199)" />" alt="CMAB Framework" width="100%">
     <p><em>Figure 1: The overall architecture of the Cross-Modal Activation Balance-Aware (CMAB) Pruning Method.</em></p>
 </div>
 
