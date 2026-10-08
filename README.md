@@ -42,19 +42,32 @@ CMAB demonstrates highly competitive parameter compression across multiple MLLM 
 
 ## 🚀 Quick Start
 
-### 1. Installation
+### 1. Environment Setup
 
-Clone this repository and install the dependencies:
+We recommend using Conda to manage the environment. The codebase has been strictly tested on an **NVIDIA RTX 4080 SUPER** GPU with the following core dependencies:
+- **Python**: 3.10
+- **PyTorch**: 2.1.2+cu121
+- **Transformers**: 4.44.2
+- **Flash Attention**: 2.5.8
+
+Clone this repository and set up the environment:
 
 ```bash
 git clone [https://github.com/start-ship-it/CMAB-Pruning.git](https://github.com/start-ship-it/CMAB-Pruning.git)
 cd CMAB-Pruning
 
-# Create a conda environment
+# Create and activate a conda environment
 conda create -n cmab python=3.10 -y
 conda activate cmab
 
-# Install pure dependencies via setup.py
+# Install PyTorch (CUDA 12.1)
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+
+# Install exact versions of core dependencies to ensure reproducibility
+pip install transformers==4.44.2
+pip install flash-attn==2.5.8 --no-build-isolation
+
+# Install remaining dependencies
 pip install -e .
 
 
