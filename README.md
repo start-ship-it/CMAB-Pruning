@@ -7,16 +7,11 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)]()
 
-**[Qi Wu]**, **[Rui Pan]**, **[Jiaqi Zhao]**, **[Zecheng Liu]**, **[Wenhui Liu]**, **[Xiaoyan Chen]**
-
-*College of Electronic Information and Automation, Tianjin University of Science and Technology*
-
 </div>
 
 <br/>
 
-> **TL;DR:** CMAB is an efficient, training-free, unstructured pruning framework tailored for Multimodal Large Language Models (MLLMs). It corrects cross-modal magnitude biases and achieves **1.58x - 1.65x end-to-end inference speedup** under 2:4 structured sparsity without degrading vision-language reasoning capabilities.
-
+> **TL;DR:** CMAB is MLLMs Pruning Method.
 ---
 
 ## 🌟 Highlights
